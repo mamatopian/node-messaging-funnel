@@ -1,0 +1,38 @@
+{
+  "name": "Funnel",
+  "version": "0.0.1",
+  "description": "Unify messaging APIs into one single service. Multi-user support, local storage support, multi-threaded service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amirmamaghani/funnel.git"
+  },
+  "keywords": [
+    "api",
+    "messaging",
+    "xmpp",
+    "irc",
+    "facebook",
+    "twitter",
+    "socket.io"
+  ],
+  "author": "Amir Mamaghani",
+  "license": "GPL-v3",
+  "bugs": {
+    "url": "https://github.com/amirmamaghani/node-messaging-funnel/issues"
+  },
+  "homepage": "https://github.com/amirmamaghani/node-messaging-funnel",
+  "dependencies": {
+    "config": "^1.14.0",
+    "imap": "^0.8.14",
+    "irc": "^0.3.12",
+    "mail": "^0.2.3",
+    "node-rest-client": "^1.5.1",
+    "node-xmpp": "^1.0.0-alpha2",
+    "socket.io": "^1.3.5",
+    "whatsapi": "^1.3.3"
+  }
+}
