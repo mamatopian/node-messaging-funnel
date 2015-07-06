@@ -33,15 +33,19 @@ var f = new funnel({
                               password: 'password'
                           }
                       },{
-                          type:'xmpp',
-                          settings:{
-                              jid: 'email@gmail.com',
-                              host: 'talk.google.com',
-                              password: 'password',
-                              port: 5222,
-                              preferred: "Plain"
-                          }
-                      }]
+                                type:'google-talk',
+                                settings:{
+                                    jid: 'username@gmail.com',
+                                    host: 'talk.google.com',
+                                    password: 'password',
+                                    port: 5222,
+                                    preferred: "Plain",
+                                    credentials: true,
+                                    legacySSL: false,
+                                    disallowTLS: false,
+                                    reconnect: true
+                                }
+                            }]
 });
 f.connect();
 ```
