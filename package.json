@@ -35,7 +35,6 @@
     "node-xmpp-client": "^1.0.0-alpha23",
     "object-hash": "^0.8.0",
     "socket.io": "^1.3.5",
-    "whatsapi": "^1.3.3",
     "xmpp-jid": "^1.1.1"
   }
 }

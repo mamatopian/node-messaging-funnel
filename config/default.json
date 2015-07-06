@@ -1,2 +1,5 @@
 {
+    "storage":{
+        "root": "http://backoffice.localhost.com/api"
+    } 
 }
