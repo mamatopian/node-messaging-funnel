@@ -14,40 +14,72 @@ Unify messaging platform into one single API
 
 ```javascript
 var funnel = require('./node-messaging-funnel');
+var readline = require('readline');
 
-var f = new funnel({
-    user: {id: 1},
-    connections: [{
-                          type: 'imap',
-                          settings: {
-                              user: 'user',
-                              password: 'password',
-                              host: 'imap.websupport.sk',
-                              port: 993,
-                              tls: true
-                          }
-                      },{
-                          type:'facebook',
-                          settings:{
-                              email: 'email@example.com',
-                              password: 'password'
-                          }
-                      },{
-                                type:'google-talk',
-                                settings:{
-                                    jid: 'username@gmail.com',
-                                    host: 'talk.google.com',
-                                    password: 'password',
-                                    port: 5222,
-                                    preferred: "Plain",
-                                    credentials: true,
-                                    legacySSL: false,
-                                    disallowTLS: false,
-                                    reconnect: true
-                                }
-                            }]
+var rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
 });
-f.connect();
+
+
+var users = [
+    {
+        user: {id: 1, name: 'Mato'},
+        accounts: [{
+            type: 'mail',
+            name: 'xxxx@biosdesign.eu',
+            enabled: false,
+            settings: {
+                user: 'xxx@biosdesign.eu'
+            }
+        }]
+    },
+    {
+        user: {id: 2, name: 'Amir'},
+        accounts: [{
+            name: 'mail xxxxx2@biosdesign.eu',
+            type: 'mail',
+            enabled: true,
+            settings: {
+                user: 'xxxxx2@biosdesign.eu',
+                password: 'pass',
+                host: 'imap.server.com',
+                port: 993,
+                tls: true,
+                smtp: {
+                    host: 'smtp.server.com',
+                    port: 465,
+                    name: 'xxxxx2@biosdesign.eu',
+                    secure: true,
+                    ignoreTLS: true,
+                    debug: true,
+                    sender: 'Name surname <xxxxx2@biosdesign.eu>',
+                    auth: {
+                        user: 'xxxxx2@biosdesign.eu',
+                        pass: 'password'
+                    }
+                }
+            }
+        }, {
+            type: 'facebook',
+            enabled: false,
+            name: 'Fejsbucik',
+            settings: {
+                email: 'mail@gmail.com`',
+                password: 'password'
+            }
+        }]
+    }
+];
+var f = new funnel(users);
+f.on('message', function(message){
+    console.log(message.user, message.message);
+    rl.question("Answer: ", function(answer) {
+        message.account.sendMessage(message.message.from, answer);
+    });
+});
+f.init();
+f.connectAllUsers();
 ```
 ## API
 
