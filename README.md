@@ -100,3 +100,17 @@ f.connectAllUsers();
 ```
 ## API
 
+
+### **Test connection**
+```javascript
+var f = new funnel();
+f.testConnection({
+    type: 'facebook',
+    settings: {
+        email: 'cicinbus@gmail.com',
+        password: 'password'
+    }
+}, function(err, connection){
+    console.log(err, connection);
+});
+```
