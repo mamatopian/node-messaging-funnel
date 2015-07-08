@@ -26,6 +26,7 @@ var users = [
     {
         user: {id: 1, name: 'Mato'},
         accounts: [{
+            id: 123,
             type: 'mail',
             name: 'xxxx@biosdesign.eu',
             enabled: false,
@@ -37,6 +38,7 @@ var users = [
     {
         user: {id: 2, name: 'Amir'},
         accounts: [{
+            id: 3,
             name: 'mail xxxxx2@biosdesign.eu',
             type: 'mail',
             enabled: true,
@@ -61,12 +63,27 @@ var users = [
                 }
             }
         }, {
+            id: 4,
             type: 'facebook',
             enabled: false,
             name: 'Fejsbucik',
             settings: {
                 email: 'mail@gmail.com`',
                 password: 'password'
+            }
+        }, {
+            id: 5,
+            type: 'google-talk',
+            enabled: true,
+            name: 'Google talk',
+            settings: {
+                "jid": "JID@gmail.com",
+                "password": 'password',
+                "host": "talk.google.com",
+                "port": 5222,
+                preferred: "PLAIN",
+                reconnect: true
+
             }
         }]
     }
