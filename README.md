@@ -4,11 +4,11 @@ Unify messaging platform into one single API
 ## Application uses 3rd party modules
 
 * [node-imap](https://github.com/mscdex/node-imap)
-* [node-mail](https://github.com/weaver/node-mail)
-* [node-irc](https://github.com/martynsmith/node-irc)
-* [node-whatsupapi](https://github.com/hidespb/node-whatsapi)
+* [nodemailer](https://github.com/andris9/Nodemailer)
 * [node-config](https://github.com/lorenwest/node-config)
 * [node-redis](https://github.com/mranney/node_redis)
+* [facebook-chat-api](https://github.com/Schmavery/facebook-chat-api)
+* [node-xmpp-client](https://github.com/node-xmpp/node-xmpp-client)
 
 ## Example
 
