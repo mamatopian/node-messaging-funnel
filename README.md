@@ -101,6 +101,58 @@ f.connectAllUsers();
 ```
 ## API
 
+### **Message in event callback object example**
+
+```JSON
+{
+    user: {User object},
+    account: {Account object},
+    message: {Message object}
+}
+```
+
+### **USER object**
+
+```JSON
+{
+    accounts: [ {Account}, {Account},...],
+    _accounts: [ {AccountFromSettings},... ]
+    getAccounts: function(unsafe),
+    setupAccounts: function(),
+    connectAllAccounts: function(),
+    connect: function(account_id),
+    addAccount: function(Account, function callback),
+    removeAccount: function(account_id),
+    removeAllAccounts: function(),
+    getAccountByID: function(account_id),
+    isAccount: function(account_id)
+}
+```
+
+### **ACCOUNT object**
+
+```JSON
+{
+    id: {integer},
+    type: 'facebook|google-talk|mail',
+    name: {string},
+    settings: {object},
+    enabled: {boolean},
+    connection: {connection API implementation object}
+}
+```
+
+### **MESSAGE object**
+
+```JSON
+{
+    from: {string},
+    to: {string},
+    subject: {string},
+    body: {string},
+    date: {Date},
+}
+```
 
 ### **Test connection**
 ```javascript
