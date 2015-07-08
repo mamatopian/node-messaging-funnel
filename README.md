@@ -105,9 +105,9 @@ f.connectAllUsers();
 
 ```JSON
 {
-    user: {User object},
-    account: {Account object},
-    message: {Message object}
+    "user": {User object},
+    "account": {Account object},
+    "message": {Message object}
 }
 ```
 
@@ -115,17 +115,17 @@ f.connectAllUsers();
 
 ```JSON
 {
-    accounts: [ {Account}, {Account},...],
-    _accounts: [ {AccountFromSettings},... ]
-    getAccounts: function(unsafe),
-    setupAccounts: function(),
-    connectAllAccounts: function(),
-    connect: function(account_id),
-    addAccount: function(Account, function callback),
-    removeAccount: function(account_id),
-    removeAllAccounts: function(),
-    getAccountByID: function(account_id),
-    isAccount: function(account_id)
+    "accounts": [ {Account}, {Account},...],
+    "_accounts": [ {AccountFromSettings},... ]
+    "getAccounts": function(unsafe),
+    "setupAccounts": function(),
+    "connectAllAccounts": function(),
+    "connect": function(account_id),
+    "addAccount": function(Account, function callback),
+    "removeAccount": function(account_id),
+    "removeAllAccounts": function(),
+    "getAccountByID": function(account_id),
+    "isAccount": function(account_id)
 }
 ```
 
@@ -133,12 +133,12 @@ f.connectAllUsers();
 
 ```JSON
 {
-    id: {integer},
-    type: 'facebook|google-talk|mail',
-    name: {string},
-    settings: {object},
-    enabled: {boolean},
-    connection: {connection API implementation object}
+    "id": {integer},
+    "type": 'facebook|google-talk|mail',
+    "name": {string},
+    "settings": {object},
+    "enabled": {boolean},
+    "connection": {connection API implementation object}
 }
 ```
 
@@ -146,11 +146,11 @@ f.connectAllUsers();
 
 ```JSON
 {
-    from: {string},
-    to: {string},
-    subject: {string},
-    body: {string},
-    date: {Date},
+    "from": {string},
+    "to": {string},
+    "subject": {string},
+    "body": {string},
+    "date": {Date},
 }
 ```
 
@@ -158,8 +158,8 @@ f.connectAllUsers();
 ```javascript
 var f = new funnel();
 f.testConnection({
-    type: 'facebook',
-    settings: {
+    "type": 'facebook',
+    "settings": {
         email: 'cicinbus@gmail.com',
         password: 'password'
     }
