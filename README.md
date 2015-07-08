@@ -48,6 +48,7 @@ var users = [
                 host: 'imap.server.com',
                 port: 993,
                 tls: true,
+                template: 'assets/mail.html',
                 smtp: {
                     host: 'smtp.server.com',
                     port: 465,
