@@ -167,3 +167,26 @@ f.testConnection({
     console.log(err, connection);
 });
 ```
+
+### **Search for messages**
+```javascript
+var f = new funnel();
+f.on('connected', function(message){
+    message.account.search(<criteria>, function(err, messages){
+        console.log(err,messages);
+    });
+    console.log('connected');
+});
+```
+* <criteria> - described in [node-imap documentation](https://github.com/mscdex/node-imap)
+
+### **Get all mails from specific address**
+```javascript
+var f = new funnel();
+f.on('connected', function(message){
+    message.account.getAllMessagesFromSender('sender@gmail.com', function(err, messages){
+        console.log(err,messages);
+    });
+    console.log('connected');
+});
+```
