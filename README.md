@@ -178,7 +178,7 @@ f.on('connected', function(message){
     console.log('connected');
 });
 ```
-* <criteria> - described in [node-imap documentation](https://github.com/mscdex/node-imap)
+* criteria - described in [node-imap documentation](https://github.com/mscdex/node-imap)
 
 ### **Get all mails from specific address**
 ```javascript
